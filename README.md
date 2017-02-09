@@ -1,3 +1,20 @@
+# gcs2cass
+
+This is a fork of the hdfs2cass project, modified to read from GCS instead of HDFS.
+
+## Install
+
+Download the Google Cloud Storage Connector for Spark and Hadoop connector jar and install it:
+
+```
+wget https://storage.googleapis.com/hadoop-lib/gcs/gcs-connector-latest-hadoop2.jar
+cd gcs2cass
+mvn install:install-file -Dfile=../gcs-connector-latest-hadoop2.jar -DgroupId=com.google.cloud.bigdataoss -DartifactId=gcs-connector -Dversion=1.6.1 -Dpackaging=jar
+```
+
+Follow the hdfs2cass instructions below to complete setup.
+
+
 # hdfs2cass
 
 hdfs2cass is a wrapper around BulkOutputFormat(s) of Apache Cassandra (C\*). It is written using Apache Crunch's API in attempt to make moving data from Hadoop's HDFS into C\* easy.
